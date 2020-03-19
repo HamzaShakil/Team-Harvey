@@ -10,7 +10,7 @@ export class MapHelperService {
 
    initMap(){
      this.map = new L.Map("map");
-     this.map.setView(new L.LatLng(31.585692323629303, 35.19333585601518), 10);
+     this.map.setView(new L.LatLng(31.585692323629303, 35.19333585601518), 5);
      L.tileLayer(`https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png`, {
              maxZoom: 20,
              attribution: 'HOT',
@@ -21,7 +21,7 @@ export class MapHelperService {
    } 
    drawPoints(data){
       // points
-      data.points.forEach(p=>this.addMarker(p.pos.lat, p.pos.lon));
+      // data.points.forEach(p=>this.addMarker(p.pos.lat, p.pos.lon));
       // lines
       data.lines.forEach(l=>{
         // src
